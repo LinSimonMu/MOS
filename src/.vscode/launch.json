@@ -1,0 +1,33 @@
+{
+    // 使用 IntelliSense 了解相关属性。
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "kernel-debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/kernel.elf",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "Console": false,
+            "MIMode": "gdb",
+            //"miDebuggerPath":"${workspaceFolder}/../Tools/gcc-arm-10.3-2021.07-x86_64-aarch64-none-elf/bin/aarch64-none-elf-gdb",
+            "miDebuggerPath":"/usr/bin/gdb-multiarch",
+            "targetArchitecture": "arm64",
+            "miDebuggerServerAddress": "localhost:1234",
+            "setupCommands": [
+                {
+                    "description":"pretty print for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+ 
+            ]
+        }
+    ]
+ }
